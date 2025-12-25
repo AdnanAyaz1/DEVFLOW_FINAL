@@ -6,3 +6,4 @@
 3. dont care about whats the functionality or what it has in the page.
 4. there maybe a layout or there may not be any layout at all. so create a root group and can have a layout.
 5. set up eslint and prettier.
+6. run the following command npm install -D prettier prettier-plugin-tailwindcss
