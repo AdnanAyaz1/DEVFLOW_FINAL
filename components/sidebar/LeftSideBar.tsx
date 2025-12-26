@@ -1,4 +1,4 @@
-import { sidebarLinks } from "@/constants";
+import { sidebarLinks } from "@/constants/NavLinks";
 
 import AuthButtons from "../button/AuthButtons/AuthButtons";
 import SidebarLink from "../link/SidebarLink";

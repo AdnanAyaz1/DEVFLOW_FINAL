@@ -1,4 +1,4 @@
-import { QuestionMetrics } from "@/constants/data";
+import { QuestionMetrics } from "@/constants/QuestionMetrics";
 
 import UserAvatar from "../avatar/UserAvatar";
 import TagBadge from "../badge/TagBadge";
@@ -19,7 +19,7 @@ interface QuestionCardProps {
 const QuestionCard = ({ title, tags, author, likes, answers, views }: QuestionCardProps) => {
   const numbers = [likes, answers, views];
   return (
-    <div className="dark:gradient-dark bg-light-400/10 question-card-drop-shadow rounded-xl sm:px-11 sm:py-9 px-4 py-6 dark:border-0 dark:shadow-none">
+    <div className="dark:gradient-dark bg-light-400/10 question-card-drop-shadow rounded-xl px-4 py-6 sm:px-11 sm:py-9 dark:border-0 dark:shadow-none">
       <h1 className="h6-semibold text-dark-100 dark:text-white">{title}</h1>
       <div className="mt-3.5 flex flex-wrap gap-4">
         {tags.map((tag) => (

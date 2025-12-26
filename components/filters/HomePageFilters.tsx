@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 
-import { HOME_FILTERS } from "@/constants";
+import { HOME_FILTERS } from "@/constants/Filters";
 
 import FilterBadge from "../badge/FilterBadge";
 
