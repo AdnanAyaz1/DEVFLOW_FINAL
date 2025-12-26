@@ -8,7 +8,7 @@ const TopTags = () => {
       {PopularTags.map((tag, index) => (
         <div className="flex-between" key={index}>
           <TagBadge tag={tag.tag} key={index} />
-          <p className="p5-regular text-dark-400 dark:text-gray-dark">{tag.count}+</p>
+          <p className="p5-regular dark:text-light-400">{tag.count}+</p>
         </div>
       ))}
     </div>

@@ -12,4 +12,19 @@ export const PopularTags = [
   { tag: "typescript", count: 800 },
   { tag: "nextjs", count: 600 },
   { tag: "tailwindcss", count: 450 },
-]
+];
+
+export const QuestionMetrics = [
+  {
+    iconPath: "/icons/thumbsUp.svg",
+    metric: "likes",
+  },
+  {
+    iconPath: "/icons/answers.svg",
+    metric: "answers",
+  },
+  {
+    iconPath: "/icons/view.svg",
+    metric: "views",
+  },
+];

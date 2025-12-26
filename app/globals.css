@@ -49,7 +49,7 @@
   .p1-semibold {
     @apply font-inter text-lg leading-[140%] font-semibold;
   }
-  
+
   .p1-medium {
     @apply font-inter text-lg leading-[140%] font-medium;
   }
@@ -82,11 +82,20 @@
   .p5-semibold {
     @apply text-[12px] leading-[130%] font-semibold;
   }
+  .p5-medium {
+    @apply text-[12px] leading-[130%] font-medium;
+  }
   .p6-medium {
     @apply text-[10px] leading-[130%] font-medium;
   }
+  .h1-bold {
+    @apply text-3xl leading-[140%] font-bold;
+  }
   .h6-bold {
     @apply text-xl leading-[130%] font-bold;
+  }
+  .h6-semibold {
+    @apply text-[20px] leading-[130%] font-semibold;
   }
   .invert-colors {
     @apply invert dark:invert-0;
@@ -102,6 +111,13 @@
   }
   .right-sidebar-drop-shadow {
     box-shadow: -10px 10px 20px 0px #dad5d51a;
+  }
+  .question-card-drop-shadow {
+    box-shadow: 0px 12px 20px 0px #b8b8b808;
+
+    box-shadow: 0px 6px 12px 0px #b8b8b805;
+
+    box-shadow: 0px 2px 4px 0px #b8b8b808;
   }
   .gradient-primary {
     background: linear-gradient(93.22deg, #ff7000 -13.95%, #e2995f 99.54%);
