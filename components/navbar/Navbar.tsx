@@ -1,30 +1,23 @@
-import { Menu, Search } from "lucide-react";
+import { Menu } from "lucide-react";
+
+import UserAvatar from "../avatar/UserAvatar";
+import { ToggleTheme } from "../dropdown/Theme";
+import GlobalSearch from "../search/GlobalSearch";
+import Logo from "./Logo";
 
 const Navbar = () => {
   return (
-    <nav className="flex-between fixed w-full gap-8 border-2 border-black p-[22px] max-sm:p-4">
+    <nav className="flex-between bg-light-100 dark:bg-dark-300/70 nav-drop-shadow fixed z-50 h-25 w-full gap-8 p-5.5 backdrop-blur-xl max-sm:p-4 dark:border-0 dark:shadow-none">
       {/* Logo */}
-      <div className="flex items-center gap-2 border-2">
-        {/* Image */}
-        <div className="size-8 rounded-full border-2"></div>
-        {/* Logo Text */}
-        <div className="h-8 w-[150px] border-2 max-sm:hidden"></div>
-      </div>
+      <Logo />
       {/* Global Search */}
-      <div className="flex w-[600px] items-center gap-4 border-2 p-4 max-sm:hidden">
-        <Search className="size-6" />
-        <input
-          type="text"
-          placeholder="Search for anything, questions, tags, users..."
-          className="w-full bg-transparent outline-none"
-        />
-      </div>
-      <div className="flex items-center gap-[18px] border-2 max-sm:gap-3">
+      <GlobalSearch />
+      <div className="flex items-center gap-4.5 max-sm:gap-3">
         {/* Theme Toggle */}
-        <div className="size-[30px] border-2"></div>
+        <ToggleTheme />
         {/* User Avatar */}
-        <div className="size-[42px] rounded-full border-2"></div>
-        <Menu className="md:hidden dark:text-white" strokeWidth={2} size={25} />
+        <UserAvatar />
+        <Menu className="cursor-pointer md:hidden dark:text-white" strokeWidth={2} size={25} />
       </div>
     </nav>
   );

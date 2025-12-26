@@ -1,0 +1,18 @@
+import { PopularTags } from "@/constants/data";
+
+import TagBadge from "./badge/TagBadge";
+
+const TopTags = () => {
+  return (
+    <div className="mt-6 space-y-4">
+      {PopularTags.map((tag, index) => (
+        <div className="flex-between" key={index}>
+          <TagBadge tag={tag.tag} key={index} />
+          <p className="p5-regular text-dark-400 dark:text-gray-dark">{tag.count}+</p>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default TopTags;

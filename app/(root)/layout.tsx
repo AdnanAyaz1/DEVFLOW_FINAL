@@ -1,18 +1,18 @@
 import Navbar from "@/components/navbar/Navbar";
-import LeftSideBar from "@/components/sidebars/LeftSideBar";
-import RightSidebar from "@/components/sidebars/RightSidebar";
+import LeftSideBar from "@/components/sidebar/LeftSideBar";
+import RightSidebar from "@/components/sidebar/RightSidebar";
 
 const Homelayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <main>
       {/* Navbar */}
       <Navbar />
-      <div className="flex pt-19.75 md:pt-26.5">
+      <div className="flex pt-18 md:pt-25">
         {/* Left Sidebar */}
         <LeftSideBar />
         {/* Main Content */}
-        <section className="mx-auto w-full max-w-3xl lg:pr-16">
-          <div className="min-h-screen bg-orange-400 py-6 max-sm:px-4">{children}</div>
+        <section className="mx-auto w-full md:pl-[12%] lg:max-w-[70%] lg:pr-[13%] lg:pl-0 xl:max-w-[60%] xl:pr-[5%]">
+          <div className="bg-light-100 dark:bg-dark-100 min-h-screen py-6 max-sm:px-4">{children}</div>
         </section>
         {/* Right SideBar */}
         <RightSidebar />
