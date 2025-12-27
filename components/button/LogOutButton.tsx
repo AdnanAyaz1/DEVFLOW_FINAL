@@ -2,7 +2,7 @@ import { LogOutIcon } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 
-const LogOut = () => {
+const LogOutButton = () => {
   return (
     <Button className="mt-4 flex h-10.5 w-full cursor-pointer xl:justify-start gap-4 bg-transparent py-3">
       <LogOutIcon size={24} color="white" className="invert-colors" />
@@ -11,4 +11,4 @@ const LogOut = () => {
   );
 };
 
-export default LogOut;
+export default LogOutButton;

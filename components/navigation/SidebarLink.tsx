@@ -11,7 +11,7 @@ interface SidebarLinkProps {
 
 const SidebarLink = ({ imageUrl, route, label }: SidebarLinkProps) => {
   const path = usePathname();
-  const isActive = path.includes(route);
+  const isActive = path === route || (path.includes(route) && route !== "/");
   return (
     <Link
       href={route}
