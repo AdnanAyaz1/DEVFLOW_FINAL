@@ -1,7 +1,7 @@
 import HomePageFilters from "@/components/filters/HomePageFilters";
 import HomeSearch from "@/components/search/HomeSearch";
-import QuestionsContent from "@/sections/Home/QuestionsContent";
-import QuestionsHeader from "@/sections/Home/QuestionsHeader";
+import QuestionsContent from "@/components/sections/Home/QuestionsContent";
+import QuestionsHeader from "@/components/sections/Home/QuestionsHeader";
 
 export default function Home() {
   return (

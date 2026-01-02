@@ -1,7 +1,7 @@
 import { TopQuestions } from "@/constants/data";
 
-import TopQuestion from "../TopQuestion";
-import TopTags from "../TopTags";
+import TopQuestion from "../../TopQuestion";
+import TopTags from "../../TopTags";
 
 const RightSidebar = () => {
   return (

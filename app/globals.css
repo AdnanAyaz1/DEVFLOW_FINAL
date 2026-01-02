@@ -4,6 +4,44 @@
 
 @custom-variant dark (&:is(.dark *));
 
+.loader {
+  width: 45px;
+  aspect-ratio: 0.75;
+  --c: no-repeat linear-gradient(#ff7000 0 0);
+  background:
+    var(--c) 0% 100%,
+    var(--c) 50% 100%,
+    var(--c) 100% 100%;
+  background-size: 20% 65%;
+  animation: l5 1s infinite linear;
+}
+@keyframes l5 {
+  20% {
+    background-position:
+      0% 50%,
+      50% 100%,
+      100% 100%;
+  }
+  40% {
+    background-position:
+      0% 0%,
+      50% 50%,
+      100% 100%;
+  }
+  60% {
+    background-position:
+      0% 100%,
+      50% 0%,
+      100% 50%;
+  }
+  80% {
+    background-position:
+      0% 100%,
+      50% 100%,
+      100% 0%;
+  }
+}
+
 @theme {
   --color-primary-100: #ff7000;
 
@@ -94,6 +132,9 @@
   .h1-bold {
     @apply text-3xl leading-[140%] font-bold;
   }
+  .h4-bold {
+    @apply font-inter text-2xl leading-[140%] font-bold;
+  }
   .h6-bold {
     @apply text-xl leading-[130%] font-bold;
   }
@@ -138,53 +179,118 @@
   }
 }
 
-.custom-scrollbar {
-  scrollbar-width: thin;
-  scrollbar-color: var(--color-dark-400) var(--color-dark-200);
-}
-.custom-scrollbar::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+.ask-editor.mdxeditor {
+  --basePageBg: #f9fafb;
+  --baseBase: #f9fafb;
+  --baseBgSubtle: #f9fafb;
+  --baseBg: #fffff;
+  --baseBgHover: #e5e7eb;
+  --baseBgActive: #e5e7eb;
+
+  --baseLine: #e5e7eb;
+  --baseBorder: #e5e7eb;
+  --baseBorderHover: #d1d5db;
+
+  --baseText: #111827;
+  --baseTextContrast: #020617;
+
+  --accentBase: #eff6ff;
+  --accentBgSubtle: #eff6ff;
+  --accentBg: #dbeafe;
+  --accentBgHover: #bfdbfe;
+  --accentBgActive: #2563eb;
+  --accentLine: #2563eb;
+  --accentBorder: #2563eb;
+  --accentBorderHover: #1d4ed8;
+  --accentSolid: #2563eb;
+  --accentSolidHover: #1d4ed8;
+  --accentText: #1d4ed8;
+  --accentTextContrast: #eff6ff;
 }
 
-.custom-scrollbar::-webkit-scrollbar-track {
-  background: var(--color-dark-200);
+/* Dark mode: match your dark Figma editor */
+.dark .ask-editor.mdxeditor {
+  --basePageBg: #020617;
+  --baseBase: #151821;
+  --baseBgSubtle: #020617;
+  --baseBg: #181a1d;
+  --baseBgHover: #0b1120;
+  --baseBgActive: #020617;
+
+  --baseLine: #020617;
+  --baseBorder: #020617;
+  --baseBorderHover: #1e293b;
+
+  --baseText: #e5e7eb;
+  --baseTextContrast: #f9fafb;
+
+  --accentBase: #020617;
+  --accentBgSubtle: #0b1120;
+  --accentBg: #0f172a;
+  --accentBgHover: #1e293b;
+  --accentBgActive: #1d4ed8;
+  --accentLine: #1d4ed8;
+  --accentBorder: #1d4ed8;
+  --accentBorderHover: #2563eb;
+  --accentSolid: #2563eb;
+  --accentSolidHover: #1d4ed8;
+  --accentText: #bfdbfe;
+  --accentTextContrast: #eff6ff;
 }
 
-.loader {
-  width: 45px;
-  aspect-ratio: 0.75;
-  --c: no-repeat linear-gradient(#ff7000 0 0);
-  background:
-    var(--c) 0% 100%,
-    var(--c) 50% 100%,
-    var(--c) 100% 100%;
-  background-size: 20% 65%;
-  animation: l5 1s infinite linear;
+/* Base font for the editor content */
+.ask-editor .mdxeditor-root-contenteditable {
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
 }
-@keyframes l5 {
-  20% {
-    background-position:
-      0% 50%,
-      50% 100%,
-      100% 100%;
-  }
-  40% {
-    background-position:
-      0% 0%,
-      50% 50%,
-      100% 100%;
-  }
-  60% {
-    background-position:
-      0% 100%,
-      50% 0%,
-      100% 50%;
-  }
-  80% {
-    background-position:
-      0% 100%,
-      50% 100%,
-      100% 0%;
-  }
+
+/* Paragraphs & list items: 16px normal */
+.ask-editor .mdxeditor-root-contenteditable p,
+.ask-editor .mdxeditor-root-contenteditable li {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* Headings: distinct sizes/weights */
+.ask-editor .mdxeditor-root-contenteditable h1 {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.ask-editor .mdxeditor-root-contenteditable h2 {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.ask-editor .mdxeditor-root-contenteditable h3 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.ask-editor .mdxeditor-root-contenteditable h4 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.ask-editor .mdxeditor-root-contenteditable h5 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.ask-editor .mdxeditor-root-contenteditable h6 {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1.4;
 }
